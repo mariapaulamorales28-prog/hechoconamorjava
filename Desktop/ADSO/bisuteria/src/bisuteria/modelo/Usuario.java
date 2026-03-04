@@ -1,5 +1,4 @@
 package bisuteria.modelo;
-
 /**
  * Yo creo la clase Usuario para representar los datos de registro del usuario
  * Contiene atributos básicos: id, nombre, correo y contraseña

@@ -1,13 +1,28 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package bisuteria.conexion;
 
-/**
- *
- * @author MariaPaulaMorales
- */
+import java.sql.Connection;
+import java.sql.DriverManager;
+
 public class ConexionBD {
     
+    
+
+    public static Connection getConexion() {
+
+        Connection conexion = null;
+
+        try {
+            String url = "jdbc:mysql://localhost:3306/bisuteria";
+            String usuario = "root";
+            String contraseña = "";
+
+            conexion = DriverManager.getConnection(url, usuario, contraseña);
+            System.out.println("Conexión exitosa");
+
+        } catch (Exception e) {
+            System.out.println("Error de conexión:"+e.getMessage());
+        }
+
+        return conexion;
+    }
 }
